@@ -4,32 +4,31 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'مترجم',
+    Svg: require('@site/static/img/translator.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        أقوم بتعريب عدة تطبيقات وأشارك خبرتي هنا.
+        صحيح أنني لست خبيرًا ولا أتقاضى المال لكن أريد أن تتوفر اللغة العربية في كل مكان.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'داعم',
+    Svg: require('@site/static/img/supporter.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        على الجميع أن يدعم القضية الفلسطينية، أليس كذلك؟
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'مبرمج',
+    Svg: require('@site/static/img/developer.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        أعرف بضع لغات برمجة... لكني لست ملتزم بتطوير أي شيء.
+        ليس لدي طموحات أو رغبة في دخول كلية حاسبات كالشباب الآخرين، لأن البرمجة مؤلمة!
       </>
     ),
   },
