@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Eyad Mahmoud',
-  tagline: 'مدونتي الخاصة التي أنشر فيها تجاربي عبر الإنترنت.',
+  tagline: 'موقعي الشخصي الذي أنشر فيه خبراتي عبر الإنترنت.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -21,7 +21,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'EyadMahm0ud', // Usually your GitHub org/user name.
-  projectName: 'N/A', // Usually your repo name.
+  projectName: 'EyadMahm0ud.GitHub.io', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
