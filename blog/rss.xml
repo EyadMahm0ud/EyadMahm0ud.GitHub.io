@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Eyad Mahmoud Blog</title>
+        <link>https://EyadMahm0ud.GithHub.io/blog</link>
+        <description>Eyad Mahmoud Blog</description>
+        <lastBuildDate>Fri, 24 Nov 2023 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>ar</language>
+        <item>
+            <title><![CDATA[بسم الله الرحمن الرحيم]]></title>
+            <link>https://EyadMahm0ud.GithHub.io/blog/1st</link>
+            <guid>https://EyadMahm0ud.GithHub.io/blog/1st</guid>
+            <pubDate>Fri, 24 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[أحب أن أرحب بكم جميعًا في مدونتي، أشك أن مدونتي ستقرأ ولكن بما أنك هنا... شكرًا لك ❤]]></description>
+            <content:encoded><![CDATA[<p>أحب أن أرحب بكم جميعًا في مدونتي، أشك أن مدونتي ستقرأ ولكن بما أنك هنا... شكرًا لك ❤</p>]]></content:encoded>
+            <category>مرحبًا</category>
+        </item>
+    </channel>
+</rss>
