@@ -11,29 +11,17 @@ const config = {
   title: 'Eyad Mahmoud',
   tagline: 'موقعي الشخصي الذي أنشر فيه خبراتي عبر الإنترنت.',
   favicon: 'img/favicon.ico',
-
-  // Set the production url of your site here
   url: 'https://EyadMahm0ud.GithHub.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
   organizationName: 'EyadMahm0ud', // Usually your GitHub org/user name.
   projectName: 'EyadMahm0ud.GitHub.io', // Usually your repo name.
-
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
-  i18n: {
+  i18n: 
+  {
     defaultLocale: 'ar',
     locales: ['ar'],
   },
-
   presets: [
     [
       'classic',
@@ -41,10 +29,6 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: 
         {
@@ -73,11 +57,15 @@ const config = {
         },
         items: 
         [
-          {to: '/blog', label: 'المدونة', position: 'right'},
+          {
+            to: '/blog',
+            label: 'المدونة',
+            position: 'left'
+          },
           {
             href: 'https://GitHub.com/EyadMahm0ud',
             label: 'GitHub',
-            position: 'left',
+            position: 'right',
           },
         ],
       },
