@@ -85,12 +85,7 @@ const config = {
         links: [
           {
             title: 'الوثائق',
-            items: [
-              {
-                label: 'لمحة',
-                to: '/docs/about',
-              },
-            ],
+            items: [],
           },
           {
             title: 'مواقع التواصل الإجتماعي',

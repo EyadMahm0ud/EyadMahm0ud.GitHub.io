@@ -51,7 +51,7 @@ export default function HomePageFeatures() {
     <section className={styles.features}>
       <div className="container">
         <h2 className={clsx('text--center', styles.featureTitle)}>
-          Text Texty Text-Text...
+          من أكون؟
         </h2>
         <hr></hr>
         <div className="row">
