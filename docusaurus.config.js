@@ -46,14 +46,12 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        blog: 
+        {
+          showReadingTime: false,
         },
-        theme: {
+        theme: 
+        {
           customCss: './src/css/custom.css',
         },
       }),
@@ -65,13 +63,16 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/social-card.jpg',
-      navbar: {
+      navbar: 
+      {
         title: 'الصفحة الرئيسية',
-        logo: {
+        logo: 
+        {
           alt: 'Salute',
           src: 'img/logo.svg',
         },
-        items: [
+        items: 
+        [
           {to: '/blog', label: 'المدونة', position: 'right'},
           {
             href: 'https://GitHub.com/EyadMahm0ud',
@@ -80,16 +81,29 @@ const config = {
           },
         ],
       },
-      footer: {
+      footer: 
+      {
         style: 'dark',
         links: [
           {
             title: 'الوثائق',
-            items: [],
+            items:
+            [
+              {
+                label: 'مساهماتي',
+                href: '/docs/contributions',
+              },
+              {
+                label: 'دليل التعريب (قريبًا)',
+                href: '/docs/arabization',
+              }
+            
+            ],
           },
           {
             title: 'مواقع التواصل الإجتماعي',
-            items: [
+            items: 
+            [
               {
                 label: 'فيسبوك',
                 href: 'https://Facebook.com/EyadMahm0ud',
@@ -102,7 +116,8 @@ const config = {
           },
           {
             title: 'المزيد',
-            items: [
+            items: 
+            [
               {
                 label: 'المدونة',
                 to: '/blog',
@@ -116,7 +131,8 @@ const config = {
         ],
         copyright: `حقوق النشر © ${new Date().getFullYear()}`,
       },
-      prism: {
+      prism: 
+      {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
