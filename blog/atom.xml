@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://EyadMahm0ud.GithHub.io/blog</id>
+    <id>https://EyadMahm0ud.GitHub.io/blog</id>
     <title>Eyad Mahmoud Blog</title>
     <updated>2023-11-25T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://EyadMahm0ud.GithHub.io/blog"/>
+    <link rel="alternate" href="https://EyadMahm0ud.GitHub.io/blog"/>
     <subtitle>Eyad Mahmoud Blog</subtitle>
-    <icon>https://EyadMahm0ud.GithHub.io/img/favicon.ico</icon>
+    <icon>https://EyadMahm0ud.GitHub.io/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[بسم الله الرحمن الرحيم]]></title>
-        <id>https://EyadMahm0ud.GithHub.io/blog/1st</id>
-        <link href="https://EyadMahm0ud.GithHub.io/blog/1st"/>
+        <id>https://EyadMahm0ud.GitHub.io/blog/1st</id>
+        <link href="https://EyadMahm0ud.GitHub.io/blog/1st"/>
         <updated>2023-11-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[أحب أن أرحب بكم جميعًا في مدونتي، أشك أن مدونتي ستقرأ ولكن بما أنك هنا... شكرًا لك ❤]]></summary>
         <content type="html"><![CDATA[<p>أحب أن أرحب بكم جميعًا في مدونتي، أشك أن مدونتي ستقرأ ولكن بما أنك هنا... شكرًا لك ❤</p>]]></content>

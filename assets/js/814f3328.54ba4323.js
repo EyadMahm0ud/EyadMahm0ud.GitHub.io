@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkeyadmahm0ud=self.webpackChunkeyadmahm0ud||[]).push([[631],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"\u0628\u0633\u0645 \u0627\u0644\u0644\u0647 \u0627\u0644\u0631\u062d\u0645\u0646 \u0627\u0644\u0631\u062d\u064a\u0645","permalink":"/blog/1st","unlisted":false}]}')}}]);
