@@ -78,7 +78,7 @@ const config = {
             items:
             [
               {
-                label: 'مساهماتي (قريبًا)ى',
+                label: 'مساهماتي (قريبًا)',
                 href: '/docs/contributions',
               },
               {
