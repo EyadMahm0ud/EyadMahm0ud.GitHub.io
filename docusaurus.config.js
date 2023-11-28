@@ -1,9 +1,3 @@
-// @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
@@ -11,10 +5,10 @@ const config = {
   title: 'Eyad Mahmoud',
   tagline: 'موقعي الشخصي الذي أنشر فيه خبراتي عبر الإنترنت.',
   favicon: 'img/favicon.ico',
-  url: 'https://EyadMahm0ud.GithHub.io',
+  url: 'https://EyadMahm0ud.GitHub.io',
   baseUrl: '/',
-  organizationName: 'EyadMahm0ud', // Usually your GitHub org/user name.
-  projectName: 'EyadMahm0ud.GitHub.io', // Usually your repo name.
+  organizationName: 'EyadMahm0ud',
+  projectName: 'EyadMahm0ud.GitHub.io',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   i18n: 
@@ -22,12 +16,15 @@ const config = {
     defaultLocale: 'ar',
     locales: ['ar'],
   },
-  presets: [
+  presets: 
+  [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
+      (
+        {
+        docs:
+        {
           sidebarPath: './sidebars.js',
         },
         blog: 
@@ -38,13 +35,15 @@ const config = {
         {
           customCss: './src/css/custom.css',
         },
-      }),
+        }
+      ),
     ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+  (
+    {
       // Replace with your project's social card
       image: 'img/social-card.jpg',
       navbar: 
@@ -72,28 +71,29 @@ const config = {
       footer: 
       {
         style: 'dark',
-        links: [
+        links:
+        [
           {
             title: 'الوثائق',
             items:
             [
               {
-                label: 'مساهماتي',
+                label: 'مساهماتي (قريبًا)ى',
                 href: '/docs/contributions',
               },
               {
-                label: 'دليل التعريب (قريبًا)',
+                label: 'دليل التعريب',
                 href: '/docs/arabization',
               }
             
             ],
           },
           {
-            title: 'مواقع التواصل الإجتماعي',
+            title: 'مواقع موجود فيها',
             items: 
             [
               {
-                label: 'فيسبوك',
+                label: 'Crowdin (ترجمة)',
                 href: 'https://Facebook.com/EyadMahm0ud',
               },
               {
@@ -124,7 +124,8 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-    }),
+    }
+  ),
 };
 
 export default config;
