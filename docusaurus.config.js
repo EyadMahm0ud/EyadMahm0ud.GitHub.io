@@ -3,7 +3,6 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Eyad Mahmoud',
-  tagline: 'موقعي الشخصي الذي أنشر فيه خبراتي عبر الإنترنت.',
   favicon: 'img/favicon.ico',
   url: 'https://EyadMahm0ud.GitHub.io',
   baseUrl: '/',
