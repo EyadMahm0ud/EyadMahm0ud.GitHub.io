@@ -78,10 +78,6 @@ const config = {
             items:
             [
               {
-                label: 'مساهماتي (قريبًا)',
-                href: '/docs/contributions',
-              },
-              {
                 label: 'دليل التعريب',
                 href: '/docs/arabization',
               }
