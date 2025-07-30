@@ -1,0 +1,15 @@
+{
+  "name": "The Conviction of Gun Dude",
+  "short_name": "The Conviction of Gun Dude",
+  "id": "com.example.TheConvictionOfGunDude",
+  "description": "Top down shoot'em up game with a leaderboard, randomized rooms, and upgrades.",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": [{
+        "src": "android-icon-96.png",
+        "sizes": "96x96"
+      }]
+}
