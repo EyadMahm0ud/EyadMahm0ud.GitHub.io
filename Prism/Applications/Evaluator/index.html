@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluator</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #terminal-output {
+            flex-grow: 1;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            padding-right: 10px;
+        }
+
+        #input-container {
+            display: flex;
+            align-items: center;
+            padding-top: 5px;
+        }
+
+        #prompt {
+            color: #fff;
+            margin-right: 5px;
+        }
+
+        #terminal-input {
+            background: transparent;
+            color: #fff;
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+
+    <pre id="terminal-output"></pre>
+
+    <div id="input-container">
+        <span id="prompt"></span>
+        <input type="text" id="terminal-input" autofocus>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const outputElement = document.getElementById('terminal-output');
+            const inputElement = document.getElementById('terminal-input');
+            const promptElement = document.getElementById('prompt');
+            const urlParams = new URLSearchParams(window.location.search);
+            const userName = urlParams.get('user') || 'Administrator';
+            const initialMessage = `
+Prism Concept [Version 1.0.0]
+(C) Prism Corporation. All rights reserved.
+`;
+            const currentPrompt = `P:/Users/${userName}>`;
+            
+            const LLM_API_URL = 'https://jdtgylnzsxquvzqhitrb.supabase.co/functions/v1/LLM';
+            function appendLine(text) {
+                outputElement.textContent += text + '\n';
+                outputElement.scrollTop = outputElement.scrollHeight;
+            }
+          
+            function clearTerminal() {
+                outputElement.textContent = initialMessage;
+            }
+
+            async function processCommand(command) {
+                appendLine(currentPrompt + ' ' + command);
+
+                const commandTrimmed = command.trim();
+                const commandParts = commandTrimmed.split(' ');
+                const mainCommand = commandParts[0].toLowerCase();
+                const args = commandParts.slice(1).join(' ');
+                
+                if (mainCommand === 'help') {
+                    const helpMessage = `
+Available commands:
+  help      - Shows this help message.
+  clear     - Clears the terminal screen.
+  llm       - Sends a prompt to the LLM. Example: llm tell me a joke
+  
+Any other input is evaluated as a JavaScript expression.
+  
+Examples:
+  - 1 + 2
+  - new Date().toLocaleDateString()
+  - 'Hello World'.toUpperCase()
+`;
+                    appendLine(helpMessage);
+                } else if (mainCommand === 'clear') {
+                    clearTerminal();
+                } else if (mainCommand === 'llm') {
+                    try {
+                        appendLine("...");
+                        const response = await fetch(LLM_API_URL, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ prompt: args })
+                        });
+
+                        outputElement.textContent = outputElement.textContent.replace('...\n', '');
+
+                        if (response.ok) {
+                            const data = await response.json();
+                            if (data.candidates.content.parts[0].text) {
+                                appendLine(data.message);
+                            } else {
+                                appendLine('Error: Invalid response format from LLM.');
+                            }
+                        } else {
+                            appendLine(`Error: API call failed with status ${response.status}`);
+                        }
+                    } catch (error) {
+                        outputElement.textContent = outputElement.textContent.replace('...\n', '');
+                        appendLine(`Error: ${error.message}`);
+                    }
+                } else {
+                    try {
+                        const result = eval(commandTrimmed);
+                        appendLine(result);
+                    } catch (error) {
+                        appendLine(`Error: ${error.message}`);
+                    }
+                }
+                
+                promptElement.textContent = currentPrompt;
+            }
+
+            appendLine(initialMessage);
+            promptElement.textContent = currentPrompt;
+            inputElement.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter') {
+                    const command = inputElement.value;
+                    inputElement.value = '';
+                    processCommand(command);
+                }
+            });
+            
+            inputElement.focus();
+        });
+    </script>
+</body>
+</html>
